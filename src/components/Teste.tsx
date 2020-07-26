@@ -13,7 +13,14 @@ import React, { useState, useEffect } from "react";
 const Teste = () => {
   const [counter, setCounter] = useState(0);
 
-  useEffect(() => console.log(`clicou ${counter} vezes`))
+  // componentDidMount, componentDidUpdate
+  //useEffect(() => console.log(`clicou ${counter} vezes`))
+
+  // componentDidMount
+  //useEffect(() => console.log(`clicou ${counter} vezes`), []);
+
+  // componentDidUpdate
+  useEffect(() => console(`clicou ${counter} vezes`), [counter]);
 
   return (
     <span>
