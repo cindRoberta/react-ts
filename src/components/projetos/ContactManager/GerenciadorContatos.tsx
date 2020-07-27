@@ -13,7 +13,7 @@ const GerenciadorContatos = ({pessoas}) => {
 
   return (
     <div>
-      <FormularioAdicionarPessoa handleSubmit={addPerson} />
+      <FormularioAdicionarPessoa addNego={addPerson} />
       <ListaPessoas pessoas={contacts} />
     </div>
   );

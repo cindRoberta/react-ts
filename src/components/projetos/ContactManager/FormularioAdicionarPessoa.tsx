@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FormularioAdicionarPessoa = (props) => {
+const FormularioAdicionarPessoa = ({addNego}) => {
   const [person, setPerson] = useState<string>('');
 
   function handleChange(e) {
@@ -8,13 +8,13 @@ const FormularioAdicionarPessoa = (props) => {
   }
 
   function handleSubmit(e) {
-    props.handleSubmit(person);
+    addNego(person);
     setPerson('');
     e.preventDefault();
   }
 
   return (
-    <form onSubmit={handleSubmr}>
+    <form onSubmit={handleSubmit}>
       <input type="text" value={person}
         placeholder="Adicionar novo contato"
         onChange={e => setPerson(e.target.value)}/>
