@@ -2,12 +2,12 @@ import React from "react";
 import "./App.css";
 
 import Teste from "./components/Teste.tsx";
-import EstruturasDeControle from "./components/estrutura/EstruturasDeControle.tsx";
+import GerenciadorContatos from "./components/GerenciadorContatos.tsx";
 
 const App = () =>
   <span className="App">
     <header className="App-header">
-      <EstruturasDeControle />
+      <GerenciadorContatos pessoas={["ffd", "hbdb"]} />
     </header>
   </span>;
 

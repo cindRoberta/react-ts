@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import FormularioAdicionarPessoa from "./FormularioAdicionarPessoa.tsx";
-import ListaPessoas from "ListaPessoas.tsx";
+import ListaPessoas from "./ListaPessoas.tsx";
 
-const ContactManager = (props) => {
+const GerenciadorContatos = (props) => {
   const [contacts, setContacts] = useState(props.pessoas);
 
   return (
@@ -12,4 +12,6 @@ const ContactManager = (props) => {
       <ListaPessoas pessoas={contacts} />
     </div>
   );
-} 
+};
+
+export default GerenciadorContatos;

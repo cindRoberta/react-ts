@@ -1,12 +1,13 @@
 import React from "react";
 
-const PeopleList = (props) => {
+const ListaPessoas = (props) => {
   const arr = props.pessoas;
-  const listItems = arr.map((val, index) =>
-    <li key={index}>{val}</li>
-  );
 
-  return <ul>{listItems}</ul>;
+  return (
+    <ul>
+      { arr.map((val, index) =>
+          <li key={index}>{val}</li>) }
+    </ul>);
 }
 
-export default PeopleList;
+export default ListaPessoas;
