@@ -11,23 +11,22 @@ import React, { useState, useEffect } from "react";
   </span>;*/
 
 const Teste = () => {
-  const [counter, setCounter] = useState(0);
+  const [showHiddenPassword, setShowHiddenPassword] = React.useState(false);
 
-  // componentDidMount, componentDidUpdate
-  //useEffect(() => console.log(`clicou ${counter} vezes`))
+  const handleToggle = () => setShowHiddenPassword(!showHiddenPassword);
 
-  // componentDidMount
-  //useEffect(() => console.log(`clicou ${counter} vezes`), []);
-
-  // componentDidUpdate
-  useEffect(() => console(`clicou ${counter} vezes`), [counter]);
+  // Gets called on mount and any time
+  // `showHiddenPassword` gets updated
+  React.useEffect(() => {
+    console.log(showHiddenPassword)
+  }, [showHiddenPassword]);
 
   return (
-    <span>
-      {counter}
-      <button onClick={() => setCounter(counter + 1)}>botao</button>
-    </span>
+    <>
+      <input type={showHiddenPassword ? "text" : "password"} />
+      <button onClick={handleToggle}>Toggle hidden password</button>
+    </>
   );
-}
+};
 
 export default Teste;
