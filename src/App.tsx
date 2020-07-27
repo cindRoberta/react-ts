@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Teste from "./components/Teste.tsx";
-import GerenciadorContatos from "./components/GerenciadorContatos.tsx";
+import GerenciadorContatos from "./components/projetos/ContactManager/GerenciadorContatos.tsx";
 
 const App = () =>
   <span className="App">
