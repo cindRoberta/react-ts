@@ -1,7 +1,7 @@
 import React from "react";
 
-const PeopleList( = (props) => {
-  const arr = props.data;
+const PeopleList = (props) => {
+  const arr = props.pessoas;
   const listItems = arr.map((val, index) =>
     <li key={index}>{val}</li>
   );
