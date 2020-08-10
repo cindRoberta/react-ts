@@ -1,8 +1,11 @@
 import React, { useState, InputHTMLAttributes } from "react";
 
-const EventHandler = ({aa, ...rest}: {aa?: number} extends InputHTMLAttributes<HTMLInputElement>) => {
-//InputHTMLAttributes<HTMLInputElement>}) => {
-//const EventHandler: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({...rest}) => {
+interface EventHandlerProps extends InputHTMLAttributes<HTMLInputElement> {
+  aa: number;
+}
+
+//const EventHandler = ({aa, ...rest}: {aa?: number} extends InputHTMLAttributes<HTMLInputElement>) => {
+const EventHandler: React.FC<EventHandlerProps> = ({aa, ...rest}) => {
   const [counter, setCounter] = useState<number>(0);
   const [entrada, setEntrada] = useState<string>('');
   const [numero, setNumero] = useState<number>(0);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const LifeCycle = () => {
+const LifeCycle = ({aa, bb}: {aa: string, bb?: number}) => {
   const [counter, setCounter] = useState(0);
 
   // componentDidMount, componentDidUpdate
@@ -14,6 +14,7 @@ const LifeCycle = () => {
 
   return (
     <span>
+      {aa} {bb}
       {counter}
       <button onClick={() => setCounter(counter + 1)}>botao</button>
     </span>

@@ -6,11 +6,14 @@ import GerenciadorContatos from "./components/projetos/ContactManager/Gerenciado
 
 import EventHandler from "./components/estrutura/EventHandler.tsx";
 
+import LifeCycle from "./components/estrutura/LifeCycle.tsx";
+
 const App = () =>
   <span className="App">
     <header className="App-header">
       <GerenciadorContatos pessoas={["ffd", "hbdb"]} />
       <EventHandler />
+      <LifeCycle aa="çanharol" bb={44} />
     </header>
   </span>;
 
